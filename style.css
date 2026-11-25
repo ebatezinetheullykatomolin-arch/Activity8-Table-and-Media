@@ -391,3 +391,19 @@ footer p {
         font-size: 27px;
     }
 }
+
+.song-select {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.table-container {
+    position: relative;
+    z-index: 5;
+}
+
+.song-select:hover {
+    color: #a987ff;
+}
