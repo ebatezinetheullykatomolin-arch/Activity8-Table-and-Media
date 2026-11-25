@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,144 +10,138 @@
 
 <body>
 
+    <!-- NAVIGATION BAR -->
     <header>
         <nav class="navbar">
-            <h2 class="logo">T&M<span>.</span></h2>
+            <h2 class="logo">Table<span>&</span>Media</h2>
 
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#table">Table</a></li>
-                <li><a href="#media">Music</a></li>
+                <li><a href="#table">Music Records</a></li>
+                <li><a href="#music">Favorite Music</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <!-- HOME SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-label">WELCOME TO MY WEBSITE</p>
 
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <p class="subtitle">WELCOME TO MY WEBSITE</p>
-                <h1>Table <span>&</span> Media</h1>
-                <p class="hero-text">
-                    A simple collection of information and music
-                    in one beautiful place.
-                </p>
-                <a href="#table" class="hero-btn">Explore More</a>
+            <h1>Table <span>&</span> Media</h1>
+
+            <p>
+                Discover my favorite music collection
+                and enjoy listening to beautiful songs.
+            </p>
+
+            <a href="#table" class="hero-btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- FAVORITE MUSIC RECORDS -->
+    <section class="table-section" id="table">
+
+        <p class="section-label">MY MUSIC COLLECTION</p>
+
+        <h2>Favorite Music <span>Records</span></h2>
+
+        <p class="section-description">
+            A collection of songs that I love listening to.
+        </p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Song Title</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Old Love</td>
+                        <td>Yuji & Putri Dahlia</td>
+                        <td>Pop</td>
+                        <td><span class="status">Favorite</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>02</td>
+                        <td>Perfect</td>
+                        <td>Ed Sheeran</td>
+                        <td>Pop</td>
+                        <td><span class="status">Favorite</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>03</td>
+                        <td>Night Changes</td>
+                        <td>One Direction</td>
+                        <td>Pop</td>
+                        <td><span class="status">Favorite</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>04</td>
+                        <td>Until I Found You</td>
+                        <td>Stephen Sanchez</td>
+                        <td>Pop</td>
+                        <td><span class="status">Favorite</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <!-- MUSIC PLAYER SECTION -->
+    <section class="music-section" id="music">
+
+        <p class="section-label">NOW PLAYING</p>
+
+        <h2>My Favorite <span>Music</span></h2>
+
+        <p class="section-description">
+            Enjoy listening to one of my favorite songs.
+        </p>
+
+        <div class="music-card">
+
+            <div class="vinyl">
+                <div class="vinyl-center"></div>
             </div>
 
-            <div class="hero-decoration">
-                <div class="music-icon">♫</div>
-                <div class="circle"></div>
-            </div>
-        </section>
-
-        <section class="table-section" id="table">
-
-            <div class="section-heading">
-                <p class="subtitle">ORGANIZED INFORMATION</p>
-                <h2>Information <span>Table</span></h2>
-                <p>Explore the list of available learning materials.</p>
+            <div class="music-info">
+                <h3>Old Love</h3>
+                <p>Yuji & Putri Dahlia</p>
+                <span class="music-tag">MY FAVORITE SONG</span>
             </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Duration</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td>Introduction to HTML</td>
-                            <td>Education</td>
-                            <td>10 min</td>
-                            <td><span class="status">Available</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>02</td>
-                            <td>CSS Basics</td>
-                            <td>Education</td>
-                            <td>15 min</td>
-                            <td><span class="status">Available</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>03</td>
-                            <td>Web Development</td>
-                            <td>Technology</td>
-                            <td>20 min</td>
-                            <td><span class="status">Available</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>04</td>
-                            <td>JavaScript Guide</td>
-                            <td>Programming</td>
-                            <td>25 min</td>
-                            <td><span class="status">Available</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/SctrVF37GAQ"
+                    title="Old Love by Yuji and Putri Dahlia"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
             </div>
 
-        </section>
+        </div>
 
-        <section class="music-section" id="media">
+    </section>
 
-            <div class="section-heading">
-                <p class="subtitle">MY MUSIC CORNER</p>
-                <h2>Favorite <span>Music</span></h2>
-                <p>Relax and enjoy listening to my favorite song.</p>
-            </div>
-
-            <div class="music-card">
-
-                <div class="album-art">
-                    <div class="vinyl">
-                        <div class="vinyl-center">♫</div>
-                    </div>
-                </div>
-
-                <div class="music-details">
-                    <p class="now-playing">NOW PLAYING</p>
-
-                    <h3>Old Love</h3>
-                    <p class="artist">Yuji & Putri Dahlia</p>
-
-                    <div class="music-line"></div>
-
-                    <p class="song-description">
-                        A beautiful song for quiet moments
-                        and meaningful memories.
-                    </p>
-
-                    <iframe
-                        src="https://www.youtube.com/embed/SctrVF37GAQ"
-                        title="Old Love - Yuji and Putri Dahlia"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
+    <!-- FOOTER -->
     <footer>
-        <h2>T&M<span>.</span></h2>
-        <p>Table & Media | Activity #8</p>
-        <p class="copyright">© 2026 All Rights Reserved.</p>
+        <p>© 2026 Table & Media | Created for Activity #8 @zineth</p>
     </footer>
 
 </body>
 </html>
+```
