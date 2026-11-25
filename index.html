@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table & Media</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .song-select {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            text-align: left;
+            text-decoration: underline;
+            text-decoration-color: #9b75ff;
+            text-underline-offset: 4px;
+        }
+
+        .song-select:hover {
+            color: #a987ff;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .music-card {
+            scroll-margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,7 +84,7 @@
         <h2>Favorite Music <span>Records</span></h2>
 
         <p class="section-description">
-            A collection of songs that I love listening to.
+            Click a song title to play it in the music player.
         </p>
 
         <div class="table-container">
@@ -65,9 +94,9 @@
                 <thead>
                     <tr>
                         <th>No.</th>
-                        <th>Song Title</th>
-                        <th>Artist</th>
-                        <th>Genre</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Duration</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -76,42 +105,54 @@
 
                     <tr>
                         <td>01</td>
-                        <td>Old Love</td>
-                        <td>Yuji & Putri Dahlia</td>
-                        <td>Pop</td>
                         <td>
-                            <span class="status">Favorite</span>
+                            <button class="song-select"
+                                onclick="playSong('Old Love', 'Yuji & Putri Dahlia', 'SctrVF37GAQ')">
+                                Old Love
+                            </button>
                         </td>
+                        <td>Pop</td>
+                        <td>4:00</td>
+                        <td><span class="status">Favorite</span></td>
                     </tr>
 
                     <tr>
                         <td>02</td>
-                        <td>Perfect</td>
-                        <td>Ed Sheeran</td>
-                        <td>Pop</td>
                         <td>
-                            <span class="status">Favorite</span>
+                            <button class="song-select"
+                                onclick="playSong('Perfect', 'Ed Sheeran', '2Vv-BfVoq4g')">
+                                Perfect
+                            </button>
                         </td>
+                        <td>Pop</td>
+                        <td>4:23</td>
+                        <td><span class="status">Favorite</span></td>
                     </tr>
 
                     <tr>
                         <td>03</td>
-                        <td>Night Changes</td>
-                        <td>One Direction</td>
-                        <td>Pop</td>
                         <td>
-                            <span class="status">Favorite</span>
+                            <button class="song-select"
+                                onclick="playSong('Night Changes', 'One Direction', 'syFZfO_wfMQ')">
+                                Night Changes
+                            </button>
                         </td>
+                        <td>Pop</td>
+                        <td>3:46</td>
+                        <td><span class="status">Favorite</span></td>
                     </tr>
 
                     <tr>
                         <td>04</td>
-                        <td>Until I Found You</td>
-                        <td>Stephen Sanchez</td>
-                        <td>Pop</td>
                         <td>
-                            <span class="status">Favorite</span>
+                            <button class="song-select"
+                                onclick="playSong('Until I Found You', 'Stephen Sanchez', 'GxldQ9eX2wo')">
+                                Until I Found You
+                            </button>
                         </td>
+                        <td>Pop</td>
+                        <td>2:57</td>
+                        <td><span class="status">Favorite</span></td>
                     </tr>
 
                 </tbody>
@@ -131,10 +172,10 @@
         <h2>My Favorite <span>Music</span></h2>
 
         <p class="section-description">
-            Enjoy listening to one of my favorite songs.
+            Select your favorite song from the table.
         </p>
 
-        <div class="music-card">
+        <div class="music-card" id="music-player">
 
             <div class="vinyl">
                 <div class="vinyl-center"></div>
@@ -142,9 +183,9 @@
 
             <div class="music-info">
 
-                <h3>Old Love</h3>
+                <h3 id="song-title">Old Love</h3>
 
-                <p>Yuji & Putri Dahlia</p>
+                <p id="song-artist">Yuji & Putri Dahlia</p>
 
                 <span class="music-tag">
                     MY FAVORITE SONG
@@ -155,10 +196,10 @@
             <div class="video-container">
 
                 <iframe
+                    id="youtube-player"
                     src="https://www.youtube.com/embed/SctrVF37GAQ"
                     title="Old Love by Yuji and Putri Dahlia"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen>
                 </iframe>
 
@@ -177,6 +218,32 @@
         </p>
 
     </footer>
+
+
+    <!-- JAVASCRIPT: CHANGE SONG -->
+    <script>
+
+        function playSong(title, artist, videoID) {
+
+            // Change song title
+            document.getElementById("song-title").textContent = title;
+
+            // Change artist name
+            document.getElementById("song-artist").textContent = artist;
+
+            // Change YouTube video
+            document.getElementById("youtube-player").src =
+                "https://www.youtube.com/embed/" + videoID;
+
+            // Scroll to music player
+            document.getElementById("music-player").scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+
+    </script>
 
 </body>
 </html>
