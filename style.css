@@ -1,0 +1,393 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b18;
+    color: #ffffff;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    background: #101020;
+    border-bottom: 1px solid #24243c;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span,
+footer span {
+    color: #a78bfa;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar a {
+    color: #c4c4d8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #a78bfa;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 440px;
+    padding: 90px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(120deg, #17152d, #25204a, #111126);
+    overflow: hidden;
+}
+
+.subtitle {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span,
+.section-heading h2 span {
+    color: #a78bfa;
+}
+
+.hero-text {
+    color: #c2c2d5;
+    max-width: 430px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #a78bfa;
+    transform: translateY(-3px);
+}
+
+.hero-decoration {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-right: 60px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a78bfa, #5b21b6);
+    opacity: 0.7;
+    box-shadow: 0 0 70px #8b5cf6;
+}
+
+.music-icon {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 45px;
+    font-size: 140px;
+    color: white;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #9999b3;
+    font-size: 13px;
+}
+
+/* TABLE */
+
+.table-section {
+    padding: 85px 9%;
+}
+
+.table-container {
+    background: #151528;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #292943;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    background: #292347;
+    color: #c4b5fd;
+    padding: 18px;
+    text-align: left;
+    font-size: 13px;
+}
+
+td {
+    padding: 18px;
+    border-bottom: 1px solid #292943;
+    color: #d1d1e2;
+    font-size: 13px;
+}
+
+tbody tr {
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background: #22213a;
+}
+
+.status {
+    background: #173a32;
+    color: #6ee7b7;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+/* MUSIC SECTION */
+
+.music-section {
+    padding: 85px 9%;
+    background: #101020;
+}
+
+.music-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    background: linear-gradient(135deg, #211d3c, #17172b);
+    border: 1px solid #373050;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+}
+
+.album-art {
+    min-width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #a78bfa, #4c1d95, #17152d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vinyl {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        #171721 0px,
+        #171721 4px,
+        #29293b 5px,
+        #171721 7px
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.vinyl-center {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #a78bfa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: white;
+}
+
+.music-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.now-playing {
+    color: #a78bfa;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.music-details h3 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.artist {
+    color: #b5b5ca;
+    font-size: 14px;
+}
+
+.music-line {
+    height: 1px;
+    background: #44405e;
+    margin: 20px 0;
+}
+
+.song-description {
+    color: #aaaac0;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.music-details iframe {
+    width: 100%;
+    height: 170px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #0b0b18;
+    border-top: 1px solid #24243c;
+}
+
+footer h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaaac0;
+    font-size: 12px;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: #696981;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .table-section,
+    .music-section {
+        padding: 65px 5%;
+    }
+
+    .music-card {
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .album-art {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .music-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar ul {
+        gap: 22px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .music-details h3 {
+        font-size: 27px;
+    }
+}
