@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,245 +6,551 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table & Media</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .song-select {
-            background: none;
-            border: none;
-            color: inherit;
-            font: inherit;
-            cursor: pointer;
-            text-align: left;
-            text-decoration: underline;
-            text-decoration-color: #9b75ff;
-            text-underline-offset: 4px;
-        }
-
-        .song-select:hover {
-            color: #a987ff;
-        }
-
-        .video-container iframe {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border: none;
-            border-radius: 12px;
-        }
-
-        .music-card {
-            scroll-margin-top: 30px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <header>
-        <nav class="navbar">
-            <h2 class="logo">Table<span>&</span>Media</h2>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2> ZINETH TABLE <span>& MEDIA</span></h2>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#table">Music Records</a></li>
-                <li><a href="#music">Favorite Music</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#player">Player</a></li>
+        </ul>
+    </nav>
 
-
-    <!-- HOME SECTION -->
+    <!-- HERO -->
     <section class="hero" id="home">
-
         <div class="hero-content">
-
-            <p class="hero-label">WELCOME TO MY WEBSITE</p>
-
-            <h1>Table <span>&</span> Media</h1>
-
-            <p>
-                Discover my favorite music collection
-                and enjoy listening to beautiful songs.
-            </p>
-
-            <a href="#table" class="hero-btn">
-                Explore Collection
-            </a>
-
+            <p class="eyebrow">WELCOME TO</p>
+            <h1>My Music <span>Collection</span></h1>
+            <p>Enjoy your favorite songs in one place.</p>
+            <a href="#music" class="hero-btn">Explore Music</a>
         </div>
-
     </section>
 
+    <!-- MUSIC TABLE -->
+    <section class="records" id="music">
 
-    <!-- FAVORITE MUSIC RECORDS -->
-    <section class="table-section" id="table">
-
-        <p class="section-label">MY MUSIC COLLECTION</p>
-
-        <h2>Favorite Music <span>Records</span></h2>
-
-        <p class="section-description">
-            Click a song title to play it in the music player.
-        </p>
+        <div class="section-heading">
+            <p>YOUR FAVORITE TRACKS</p>
+            <h2>Music Records</h2>
+            <span>Choose a song and enjoy listening.</span>
+        </div>
 
         <div class="table-container">
-
             <table>
-
                 <thead>
                     <tr>
                         <th>No.</th>
-                        <th>Title</th>
+                        <th>Song Title</th>
+                        <th>Artist</th>
                         <th>Category</th>
                         <th>Duration</th>
-                        <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
 
                 <tbody>
-
                     <tr>
                         <td>01</td>
-                        <td>
-                            <button class="song-select"
-                                onclick="playSong('Old Love', 'Yuji & Putri Dahlia', 'SctrVF37GAQ')">
-                                Old Love
-                            </button>
-                        </td>
-                        <td>Pop</td>
-                        <td>4:00</td>
-                        <td><span class="status">Favorite</span></td>
+                        <td>Old Love</td>
+                        <td>Yuji & Putri Dahlia</td>
+                        <td>Love Song</td>
+                        <td>4:09</td>
+                        <td><button class="play-small" onclick="playSong(0)">▶ Play</button></td>
                     </tr>
 
                     <tr>
                         <td>02</td>
-                        <td>
-                            <button class="song-select"
-                                onclick="playSong('Perfect', 'Ed Sheeran', '2Vv-BfVoq4g')">
-                                Perfect
-                            </button>
-                        </td>
+                        <td>Night Changes</td>
+                        <td>One Direction</td>
                         <td>Pop</td>
-                        <td>4:23</td>
-                        <td><span class="status">Favorite</span></td>
+                        <td>3:47</td>
+                        <td><button class="play-small" onclick="playSong(1)">▶ Play</button></td>
                     </tr>
 
                     <tr>
                         <td>03</td>
-                        <td>
-                            <button class="song-select"
-                                onclick="playSong('Night Changes', 'One Direction', 'syFZfO_wfMQ')">
-                                Night Changes
-                            </button>
-                        </td>
-                        <td>Pop</td>
-                        <td>3:46</td>
-                        <td><span class="status">Favorite</span></td>
+                        <td>Lowkey</td>
+                        <td>NIKI</td>
+                        <td>R&B</td>
+                        <td>2:51</td>
+                        <td><button class="play-small" onclick="playSong(2)">▶ Play</button></td>
                     </tr>
 
                     <tr>
                         <td>04</td>
-                        <td>
-                            <button class="song-select"
-                                onclick="playSong('Until I Found You', 'Stephen Sanchez', 'GxldQ9eX2wo')">
-                                Until I Found You
-                            </button>
-                        </td>
+                        <td>Stop The Wedding</td>
+                        <td>Unknown Artist</td>
                         <td>Pop</td>
-                        <td>2:57</td>
-                        <td><span class="status">Favorite</span></td>
+                        <td>3:19</td>
+                        <td><button class="play-small" onclick="playSong(3)">▶ Play</button></td>
                     </tr>
 
+                    <tr>
+                        <td>05</td>
+                        <td>Paninindigan Kita</td>
+                        <td>Ben&Ben</td>
+                        <td>OPM</td>
+                        <td>5:10</td>
+                        <td><button class="play-small" onclick="playSong(4)">▶ Play</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>06</td>
+                        <td>Musika</td>
+                        <td>Unknown Artist</td>
+                        <td>OPM</td>
+                        <td>4:05</td>
+                        <td><button class="play-small" onclick="playSong(5)">▶ Play</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>07</td>
+                        <td>TMA</td>
+                        <td>Unknown Artist</td>
+                        <td>Pop</td>
+                        <td>3:20</td>
+                        <td><button class="play-small" onclick="playSong(6)">▶ Play</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>08</td>
+                        <td>Personal</td>
+                        <td>Unknown Artist</td>
+                        <td>R&B</td>
+                        <td>3:29</td>
+                        <td><button class="play-small" onclick="playSong(7)">▶ Play</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>09</td>
+                        <td>Kabisado</td>
+                        <td>Unknown Artist</td>
+                        <td>OPM</td>
+                        <td>3:28</td>
+                        <td><button class="play-small" onclick="playSong(8)">▶ Play</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Take All the Love</td>
+                        <td>Arthur Nery</td>
+                        <td>R&B</td>
+                        <td>3:26</td>
+                        <td><button class="play-small" onclick="playSong(9)">▶ Play</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Talking Body</td>
+                        <td>Tove Lo</td>
+                        <td>Pop</td>
+                        <td>21:45</td>
+                        <td><button class="play-small" onclick="playSong(10)">▶ Play</button></td>
+                    </tr>
                 </tbody>
-
             </table>
-
         </div>
 
+        <p class="table-note">11 songs in your music collection.</p>
     </section>
 
+    <!-- MUSIC PLAYER -->
+    <section class="player-section" id="player">
 
-    <!-- MUSIC PLAYER SECTION -->
-    <section class="music-section" id="music">
-
-        <p class="section-label">NOW PLAYING</p>
-
-        <h2>My Favorite <span>Music</span></h2>
-
-        <p class="section-description">
-            Select your favorite song from the table.
-        </p>
-
-        <div class="music-card" id="music-player">
-
-            <div class="vinyl">
-                <div class="vinyl-center"></div>
-            </div>
-
-            <div class="music-info">
-
-                <h3 id="song-title">Old Love</h3>
-
-                <p id="song-artist">Yuji & Putri Dahlia</p>
-
-                <span class="music-tag">
-                    MY FAVORITE SONG
-                </span>
-
-            </div>
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-player"
-                    src="https://www.youtube.com/embed/SctrVF37GAQ"
-                    title="Old Love by Yuji and Putri Dahlia"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
+        <div class="section-heading">
+            <p>NOW PLAYING</p>
+            <h2>Music Player</h2>
         </div>
 
+        <div class="player-card">
+
+            <!-- VINYL -->
+            <div class="player-top">
+
+                <div class="vinyl" id="vinyl">
+                    <div class="vinyl-center">♫</div>
+                </div>
+
+                <div class="song-info">
+                    <p class="playing-label">
+                        <span class="live-dot"></span> NOW PLAYING
+                    </p>
+
+                    <h2 id="song-title">Old Love</h2>
+                    <p id="song-artist">Yuji & Putri Dahlia</p>
+
+                    <span class="music-tag">MUSIC COLLECTION</span>
+                </div>
+
+            </div>
+
+            <!-- EQUALIZER -->
+            <div class="visualizer" id="visualizer">
+                <div class="equalizer">
+                    <span style="--h:25px"></span>
+                    <span style="--h:42px"></span>
+                    <span style="--h:18px"></span>
+                    <span style="--h:55px"></span>
+                    <span style="--h:32px"></span>
+                    <span style="--h:48px"></span>
+                    <span style="--h:22px"></span>
+                    <span style="--h:60px"></span>
+                    <span style="--h:35px"></span>
+                    <span style="--h:50px"></span>
+                    <span style="--h:20px"></span>
+                    <span style="--h:44px"></span>
+                    <span style="--h:28px"></span>
+                    <span style="--h:58px"></span>
+                    <span style="--h:36px"></span>
+                    <span style="--h:47px"></span>
+                    <span style="--h:24px"></span>
+                    <span style="--h:53px"></span>
+                    <span style="--h:30px"></span>
+                    <span style="--h:45px"></span>
+                    <span style="--h:20px"></span>
+                    <span style="--h:56px"></span>
+                    <span style="--h:33px"></span>
+                    <span style="--h:48px"></span>
+                </div>
+            </div>
+
+            <!-- PROGRESS AND DURATION -->
+            <div class="progress-area">
+
+                <input
+                    type="range"
+                    id="progress"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">4:09</span>
+                </div>
+
+            </div>
+
+            <!-- PLAYER CONTROLS -->
+            <div class="controls">
+
+                <button id="repeat-btn" class="small-control" title="Repeat">↻</button>
+
+                <button id="prev-btn" class="small-control" title="Previous">|◀</button>
+
+                <button id="play-btn" class="play-button" title="Play/Pause">▶</button>
+
+                <button id="next-btn" class="small-control" title="Next">▶|</button>
+
+                <button id="volume-icon" class="small-control" title="Mute">♫</button>
+
+            </div>
+
+            <!-- VOLUME -->
+            <div class="volume-area">
+                <span>VOLUME</span>
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                >
+            </div>
+
+            <p class="player-footer">ENJOY YOUR FAVORITE MUSIC</p>
+
+        </div>
     </section>
 
+    <!-- AUDIO -->
+    <audio id="audio-player" preload="metadata"></audio>
 
     <!-- FOOTER -->
     <footer>
-
-        <p>
-            © 2026 Table & Media | Created for Activity #8 @zineth
-        </p>
-
+        <p>© 2026 Table & Media | My Music Collection</p>
     </footer>
 
 
-    <!-- JAVASCRIPT: CHANGE SONG -->
+    <!-- JAVASCRIPT -->
     <script>
 
-        function playSong(title, artist, videoID) {
+        // SONG LIST WITH DURATION
+        const songs = [
+            {
+                title: "Old Love",
+                artist: "Yuji & Putri Dahlia",
+                file: "music/old-love.mp3",
+                duration: "4:09"
+            },
+            {
+                title: "Night Changes",
+                artist: "One Direction",
+                file: "music/night-changes.mp3",
+                duration: "3:47"
+            },
+            {
+                title: "Lowkey",
+                artist: "NIKI",
+                file: "music/lowkey.mp3",
+                duration: "2:51"
+            },
+            {
+                title: "Stop The Wedding",
+                artist: "Unknown Artist",
+                file: "music/stop-the-wedding.mp3",
+                duration: "3:19"
+            },
+            {
+                title: "Paninindigan Kita",
+                artist: "Ben&Ben",
+                file: "music/paninindigan-kita.mp3",
+                duration: "5:10"
+            },
+            {
+                title: "Musika",
+                artist: "Unknown Artist",
+                file: "music/musika.mp3",
+                duration: "4:05"
+            },
+            {
+                title: "TMA",
+                artist: "Unknown Artist",
+                file: "music/tma.mp3",
+                duration: "3:20"
+            },
+            {
+                title: "Personal",
+                artist: "Unknown Artist",
+                file: "music/personal.mp3",
+                duration: "3:29"
+            },
+            {
+                title: "Kabisado",
+                artist: "Unknown Artist",
+                file: "music/kabisado.mp3",
+                duration: "3:28"
+            },
+            {
+                title: "Take All the Love",
+                artist: "Arthur Nery",
+                file: "music/take-all-the-love.mp3",
+                duration: "3:26"
+            },
+            {
+                title: "Talking Body",
+                artist: "Tove Lo",
+                file: "music/talking-body.mp3",
+                duration: "21:45"
+            }
+        ];
 
-            // Change song title
-            document.getElementById("song-title").textContent = title;
+        // GET HTML ELEMENTS
+        const audio = document.getElementById("audio-player");
+        const songTitle = document.getElementById("song-title");
+        const songArtist = document.getElementById("song-artist");
+        const playBtn = document.getElementById("play-btn");
+        const progress = document.getElementById("progress");
+        const currentTime = document.getElementById("current-time");
+        const totalTime = document.getElementById("total-time");
+        const vinyl = document.getElementById("vinyl");
+        const visualizer = document.getElementById("visualizer");
+        const repeatBtn = document.getElementById("repeat-btn");
+        const volume = document.getElementById("volume");
 
-            // Change artist name
-            document.getElementById("song-artist").textContent = artist;
+        let currentIndex = 0;
 
-            // Change YouTube video
-            document.getElementById("youtube-player").src =
-                "https://www.youtube.com/embed/" + videoID;
+        // FORMAT TIME
+        function formatTime(seconds) {
+            if (!Number.isFinite(seconds)) {
+                return "0:00";
+            }
 
-            // Scroll to music player
-            document.getElementById("music-player").scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
 
+            return minutes + ":" + String(secs).padStart(2, "0");
         }
+
+        // LOAD SONG
+        function loadSong(index) {
+            currentIndex = index;
+
+            const song = songs[currentIndex];
+
+            songTitle.textContent = song.title;
+            songArtist.textContent = song.artist;
+
+            // SHOW THE SAVED DURATION IMMEDIATELY
+            totalTime.textContent = song.duration;
+
+            audio.src = song.file;
+            audio.load();
+
+            progress.value = 0;
+            currentTime.textContent = "0:00";
+
+            // UPDATE TABLE BUTTONS
+            document.querySelectorAll(".play-small").forEach((button, i) => {
+                button.classList.toggle("selected", i === index);
+                button.textContent = i === index ? "♫ Selected" : "▶ Play";
+            });
+        }
+
+        // PLAY AUDIO
+        function playAudio() {
+            audio.play()
+                .then(() => {
+                    updatePlayer();
+                })
+                .catch(error => {
+                    console.error("Audio playback error:", error);
+                    updatePlayer();
+                    alert("Cannot play this song. Please check your MP3 file and music folder.");
+                });
+        }
+
+        // PLAY SONG FROM TABLE
+        function playSong(index) {
+            loadSong(index);
+            playAudio();
+
+            document.getElementById("player").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        // PLAY / PAUSE
+        function togglePlay() {
+            if (audio.paused) {
+                playAudio();
+            } else {
+                audio.pause();
+                updatePlayer();
+            }
+        }
+
+        // UPDATE PLAYER DESIGN
+        function updatePlayer() {
+            if (audio.paused) {
+                playBtn.textContent = "▶";
+                vinyl.classList.remove("spinning");
+                visualizer.classList.remove("playing");
+            } else {
+                playBtn.textContent = "Ⅱ";
+                vinyl.classList.add("spinning");
+                visualizer.classList.add("playing");
+            }
+        }
+
+        // NEXT SONG
+        function nextSong() {
+            currentIndex = (currentIndex + 1) % songs.length;
+            loadSong(currentIndex);
+            playAudio();
+        }
+
+        // PREVIOUS SONG
+        function previousSong() {
+            if (audio.currentTime > 3) {
+                audio.currentTime = 0;
+                return;
+            }
+
+            currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+            loadSong(currentIndex);
+            playAudio();
+        }
+
+        // PLAY BUTTON
+        playBtn.addEventListener("click", togglePlay);
+
+        // NEXT BUTTON
+        document.getElementById("next-btn").addEventListener("click", nextSong);
+
+        // PREVIOUS BUTTON
+        document.getElementById("prev-btn").addEventListener("click", previousSong);
+
+        // REPEAT BUTTON
+        repeatBtn.addEventListener("click", function() {
+            audio.loop = !audio.loop;
+            repeatBtn.classList.toggle("active", audio.loop);
+        });
+
+        // UPDATE CURRENT TIME AND PROGRESS
+        audio.addEventListener("timeupdate", function() {
+            currentTime.textContent = formatTime(audio.currentTime);
+
+            if (Number.isFinite(audio.duration) && audio.duration > 0) {
+                progress.value = (audio.currentTime / audio.duration) * 100;
+            }
+        });
+
+        // UPDATE TOTAL DURATION WHEN AUDIO METADATA LOADS
+        audio.addEventListener("loadedmetadata", function() {
+            if (Number.isFinite(audio.duration)) {
+                totalTime.textContent = formatTime(audio.duration);
+            }
+        });
+
+        // ALSO CHECK DURATION WHEN IT CHANGES
+        audio.addEventListener("durationchange", function() {
+            if (Number.isFinite(audio.duration)) {
+                totalTime.textContent = formatTime(audio.duration);
+            }
+        });
+
+        // SEEK SONG
+        progress.addEventListener("input", function() {
+            if (Number.isFinite(audio.duration) && audio.duration > 0) {
+                audio.currentTime = (progress.value / 100) * audio.duration;
+            }
+        });
+
+        // CHANGE VOLUME
+        volume.addEventListener("input", function() {
+            audio.volume = Number(volume.value);
+        });
+
+        // MUTE / UNMUTE
+        document.getElementById("volume-icon").addEventListener("click", function() {
+            if (audio.volume > 0) {
+                audio.volume = 0;
+                volume.value = 0;
+            } else {
+                audio.volume = 1;
+                volume.value = 1;
+            }
+        });
+
+        // PLAYER ANIMATION
+        audio.addEventListener("play", updatePlayer);
+        audio.addEventListener("pause", updatePlayer);
+
+        // AUTOMATIC NEXT SONG
+        audio.addEventListener("ended", function() {
+            if (!audio.loop) {
+                nextSong();
+            }
+        });
+
+        // AUDIO ERROR
+        audio.addEventListener("error", function() {
+            console.error("Unable to load MP3:", songs[currentIndex].file);
+        });
+
+        // INITIAL SETTINGS
+        loadSong(0);
+        audio.volume = 1;
 
     </script>
 
 </body>
 </html>
-```
